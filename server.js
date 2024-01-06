@@ -5,8 +5,8 @@ const htmlRoutes = require("./routes/htmlRoutes");
 const fs = require("fs");
 const path = require("path");
 
-const app = express();
 const PORT = process.env.PORT || 3001;
+const app = express();
 
 //* (FROM EXAMPLES) express.static() method. The way it works is that we provide a file path to a location in our application
 //* (in this case, the public folder) and instruct the server to make these files static resources.
@@ -14,14 +14,16 @@ const PORT = process.env.PORT || 3001;
 //* Every time we create a server that will serve a front end as well as JSON data, we'll always want to use this middleware.
 app.use(express.static("public"));
 
-//* Parses incoming json data
+//* Middleware, Parses incoming json data
 app.use(express.json());
 
-//* Parses incoming string or data array
+//* Middleware, Parses incoming string or data array
 app.use(express.urlencoded({ extended: true }));
 
+//* Send all requests that begin with /api to index.js in the routes folder
 app.use("/api", apiRoutes);
 
+//* Send all requests that begin with / to index.html in the routes folder
 app.use("/", htmlRoutes);
 
 app.listen(PORT, () => console.log(`API server on http://localhost:${PORT}`));
