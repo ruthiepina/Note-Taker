@@ -3,7 +3,6 @@ let noteTitle;
 let noteText;
 let saveNoteBtn;
 let newNoteBtn;
-
 let noteList;
 
 if (window.location.pathname === "/notes") {
@@ -117,7 +116,7 @@ const handleNewNoteView = (e) => {
 };
 
 // Renders the appropriate buttons based on the state of the form
-const handleRenderBtns = () => {
+const handleRenderSaveBtn = () => {
    show(clearBtn);
    if (!noteTitle.value.trim() && !noteText.value.trim()) {
       hide(clearBtn);
