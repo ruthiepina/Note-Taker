@@ -1,17 +1,17 @@
-let noteForm;
 let noteTitle;
+// let noteForm;
 let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
 if (window.location.pathname === "/notes") {
-   noteForm = document.querySelector(".note-form");
+   // noteForm = document.querySelector(".note-form");
    noteTitle = document.querySelector(".note-title");
    noteText = document.querySelector(".note-textarea");
    saveNoteBtn = document.querySelector(".save-note");
    newNoteBtn = document.querySelector(".new-note");
-   clearBtn = document.querySelector(".clear-btn");
+   // clearBtn = document.querySelector(".clear-btn");
    noteList = document.querySelectorAll(".list-container .list-group");
 }
 
@@ -55,7 +55,7 @@ const deleteNote = (id) =>
 
 const renderActiveNote = () => {
    hide(saveNoteBtn);
-   hide(clearBtn);
+   // hide(clearBtn);
 
    if (activeNote.id) {
       show(newNoteBtn);
@@ -64,7 +64,7 @@ const renderActiveNote = () => {
       noteTitle.value = activeNote.title;
       noteText.value = activeNote.text;
    } else {
-      hide(newNoteBtn);
+      // hide(newNoteBtn);
       noteTitle.removeAttribute("readonly");
       noteText.removeAttribute("readonly");
       noteTitle.value = "";
@@ -111,17 +111,19 @@ const handleNoteView = (e) => {
 // Sets the activeNote to and empty object and allows the user to enter a new note
 const handleNewNoteView = (e) => {
    activeNote = {};
-   show(clearBtn);
+   // show(clearBtn);
    renderActiveNote();
 };
 
 // Renders the appropriate buttons based on the state of the form
 const handleRenderSaveBtn = () => {
-   show(clearBtn);
-   if (!noteTitle.value.trim() && !noteText.value.trim()) {
-      hide(clearBtn);
-   } else if (!noteTitle.value.trim() || !noteText.value.trim()) {
+   // show(clearBtn);
+   if (!noteTitle.value.trim() || !noteText.value.trim()) {
       hide(saveNoteBtn);
+      // (!noteTitle.value.trim() && !noteText.value.trim()) {
+      // hide(clearBtn);
+   // } else if (!noteTitle.value.trim() || !noteText.value.trim()) {
+      // hide(saveNoteBtn);
    } else {
       show(saveNoteBtn);
    }
@@ -150,7 +152,7 @@ const renderNoteList = async (notes) => {
 
       if (delBtn) {
          const delBtnEl = document.createElement("i");
-         delBtnEl.classList.add("fas", "fa-trash-alt", "float-right", "text-danger", "delete-note");
+         delBtnEl.classList.add("bi", "bi-x-circle", "float-right", "text-danger", "delete-note");
          delBtnEl.addEventListener("click", handleNoteDelete);
 
          liEl.append(delBtnEl);

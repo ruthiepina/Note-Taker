@@ -2,8 +2,9 @@
 // const path = require("path");
 
 const router = require("express").Router();
-// const { renderNoteList } = require("../../public/assets/js/renderNotes.js");
-const { notes } = require("../../db/db.json");
+const { renderNoteList } = require;
+   // ("../../public/assets/js/renderNotes.js");
+// const { notes } = require("../../db/db.json");
 const uid = require("uid2"); //* This generates ID value, npm package
 const fs = require("fs"); //* going to use writeFile
 const path = require("path");

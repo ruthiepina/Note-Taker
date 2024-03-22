@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const { builtinModules } = require("module");
+// const { builtinModules } = require("module");
 const path = require("path");
 
 router.get("/", (req, res) => {
-   res.sendFile(path.join(__dirname, "../public/index.html"));
+   res.sendFile(path.join(__dirname, "../../public/index.html"));
 });
 
 router.get("/notes", (req, res) => {
