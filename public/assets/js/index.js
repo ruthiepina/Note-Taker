@@ -1,5 +1,5 @@
-let noteTitle;
 // let noteForm;
+let noteTitle;
 let noteText;
 let saveNoteBtn;
 let newNoteBtn;
@@ -15,6 +15,9 @@ if (window.location.pathname === "/notes") {
    noteList = document.querySelectorAll(".list-container .list-group");
 }
 
+// activeNote is used to keep track of the note in the textarea
+let activeNote = {};
+
 // Show an element
 const show = (elem) => {
    elem.style.display = "inline";
@@ -25,8 +28,6 @@ const hide = (elem) => {
    elem.style.display = "none";
 };
 
-// activeNote is used to keep track of the note in the textarea
-let activeNote = {};
 
 const getNotes = () =>
    fetch("/api/notes", {
@@ -58,7 +59,7 @@ const renderActiveNote = () => {
    // hide(clearBtn);
 
    if (activeNote.id) {
-      show(newNoteBtn);
+      // show(newNoteBtn);
       noteTitle.setAttribute("readonly", true);
       noteText.setAttribute("readonly", true);
       noteTitle.value = activeNote.title;
@@ -189,4 +190,4 @@ if (window.location.pathname === "/notes") {
 
 getAndRenderNotes();
 
-module.exports = renderActiveNote;
+// module.exports = renderActiveNote;

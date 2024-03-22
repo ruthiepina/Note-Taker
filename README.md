@@ -1,4 +1,6 @@
-# Note Taker Starter Code
+# Note Taker
+
+![License Badge](./assets/badge.svg)
 
 ## Description
 
@@ -48,13 +50,11 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 [Note-Taker](https://github.com/ruthiepina/Note-Taker)
 [Deployed Application]()
 
-## Credits
-
 ## License
 
-MIT License
-A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works,
-modifications, and larger works may be distributed under different terms and without source code.
+Copyright (c) 2024 Ruthie Pina. All rights reserved.
+
+Licensed under the [MIT License](https://choosealicense.com/licenses/mit).
 
 ## Questions
 
