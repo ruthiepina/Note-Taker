@@ -43,12 +43,16 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ```
 
 ## Application Examples
-(put picture here of finished app on heroku)
+
+![Landing Page](./assets/landing-page.PNG)
+
+![Note Taker Page](./assets/note-taker.PNG)
 
 ## Deployment
 
 [Note-Taker](https://github.com/ruthiepina/Note-Taker)
-[Deployed Application]()
+
+[Deployed Application](https://module11-note-taker-b70c7ad21935.herokuapp.com/)
 
 ## License
 
