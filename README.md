@@ -50,7 +50,7 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Deployment
 
-[Note-Taker](https://github.com/ruthiepina/Note-Taker)
+[Note-Taker Repo](https://github.com/ruthiepina/Note-Taker)
 
 [Deployed Application](https://module11-note-taker-b70c7ad21935.herokuapp.com/)
 
